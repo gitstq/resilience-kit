@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resilience-kit"
+version = "1.0.0"
+description = "Zero-dependency resilience primitives for Python: rate limiting, circuit breaker, retry and bulkhead."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "gitstq", email = "gitstq@users.noreply.github.com" }
+]
+keywords = [
+    "resilience",
+    "rate-limit",
+    "circuit-breaker",
+    "retry",
+    "bulkhead",
+    "fault-tolerance",
+    "zero-dependency",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/gitstq/resilience-kit"
+Repository = "https://github.com/gitstq/resilience-kit"
+Issues = "https://github.com/gitstq/resilience-kit/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+resilience_kit = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
